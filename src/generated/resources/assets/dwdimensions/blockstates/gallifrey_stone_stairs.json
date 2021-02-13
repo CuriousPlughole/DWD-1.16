@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing\u003dnorth": {
+      "model": "dwdimensions:block/gallifrey_stone_stairs",
+      "y": 0
+    },
+    "facing\u003deast": {
+      "model": "dwdimensions:block/gallifrey_stone_stairs",
+      "y": 90
+    },
+    "facing\u003dsouth": {
+      "model": "dwdimensions:block/gallifrey_stone_stairs",
+      "y": 180
+    },
+    "facing\u003dwest": {
+      "model": "dwdimensions:block/gallifrey_stone_stairs",
+      "y": 270
+    }
+  }
+}

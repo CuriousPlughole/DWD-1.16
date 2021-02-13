@@ -1,0 +1,16 @@
+modLoader="javafml"
+loaderVersion="[35,)" 
+license="All rights reserved"
+issueTrackerURL="https://github.com/CuriousPlughole/DWDimensions/issues"
+
+[[mods]]
+modId="dwdimensions"
+version="${file.jarVersion}"
+displayName="DWDimensions"
+displayURL = "https://discord.gg/4pMhjvz"
+logoFile="logo.png"
+credits="Suff, 50ap5ud5"
+authors="CuriousPlughole, LyLinx, Simopard"
+description='''
+Adds various dimensions from the Doctor Who universe to minecraft.
+'''

@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "dwdimensions:block/gallifrey/gallifrey_stone_slab"
+        },
+        "type=top": {
+            "model": "dwdimensions:block/gallifrey/gallifrey_stone_slab_top"
+        },
+        "type=double": {
+            "model": "dwdimensions:block/gallifrey/gallifrey_stone"
+        }
+    }
+}

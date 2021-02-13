@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "dwdimensions:blocks/gallifrey/gallifrey_shrub"
+  }
+}
