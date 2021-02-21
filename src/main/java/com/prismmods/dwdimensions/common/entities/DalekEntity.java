@@ -21,6 +21,8 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 
 public class DalekEntity extends MonsterEntity implements IRangedAttackMob {
@@ -50,9 +52,9 @@ public class DalekEntity extends MonsterEntity implements IRangedAttackMob {
 
 	public static AttributeModifierMap.MutableAttribute createAttributes() {
 		return MonsterEntity.func_234295_eP_()
-				.createMutableAttribute(Attributes.FOLLOW_RANGE, 35D)
+				.createMutableAttribute(Attributes.FOLLOW_RANGE, 30D)
 				.createMutableAttribute(Attributes.MAX_HEALTH, 40D)
-				.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.2D);
+				.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.18D);
 	}
 
 	@Override
@@ -72,6 +74,11 @@ public class DalekEntity extends MonsterEntity implements IRangedAttackMob {
 		return true;
 	}
 	
+	@Override
+	protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
+		return SoundEvents.ENTITY_IRON_GOLEM_HURT;
+	}
+
 	/*
 	 * TEXTURE STUFF
 	 */

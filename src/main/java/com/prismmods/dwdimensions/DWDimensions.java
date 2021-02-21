@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.prismmods.dwdimensions.client.util.DalekModelGetter;
 import com.prismmods.dwdimensions.common.entities.DalekEntity;
+import com.prismmods.dwdimensions.common.entities.TimeLordEntity;
 import com.prismmods.dwdimensions.core.init.BiomeInit;
 import com.prismmods.dwdimensions.core.init.BlockInit;
 import com.prismmods.dwdimensions.core.init.DimensionInit;
@@ -35,7 +36,6 @@ public class DWDimensions {
 		bus.addListener(this::setup);
 		//bus.addListener(this::gatherData);
 
-		//aaa
 		SoundInit.SOUNDS.register(bus);
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
@@ -53,6 +53,7 @@ public class DWDimensions {
 	private void setup(final FMLCommonSetupEvent event) {
 		DalekModelGetter.setupLists();
 		GlobalEntityTypeAttributes.put(EntityTypeInit.DALEK.get(), DalekEntity.createAttributes().create());
+		GlobalEntityTypeAttributes.put(EntityTypeInit.TIMELORD.get(), TimeLordEntity.createAttributes().create());
 		
 		
 		event.enqueueWork(() -> {

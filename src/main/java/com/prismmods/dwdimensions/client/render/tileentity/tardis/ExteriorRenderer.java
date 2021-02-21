@@ -4,7 +4,6 @@ package com.prismmods.dwdimensions.client.render.tileentity.tardis;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.prismmods.dwdimensions.DWDimensions;
-import com.prismmods.dwdimensions.client.render.model.TardisTennantModel;
 import com.prismmods.dwdimensions.common.tileentities.TardisTileEntity;
 
 import net.minecraft.client.renderer.IRenderTypeBuffer;

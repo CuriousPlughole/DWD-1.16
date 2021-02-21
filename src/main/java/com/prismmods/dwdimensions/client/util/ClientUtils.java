@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import com.prismmods.dwdimensions.DWDimensions;
 import com.prismmods.dwdimensions.client.render.entity.DalekRenderer;
+import com.prismmods.dwdimensions.client.render.entity.TimeLordRenderer;
 import com.prismmods.dwdimensions.client.render.tileentity.tardis.ExteriorRenderer;
 import com.prismmods.dwdimensions.core.init.BlockInit;
 import com.prismmods.dwdimensions.core.init.DimensionInit;
@@ -39,6 +40,7 @@ public class ClientUtils {
 		ClientRegistry.bindTileEntityRenderer(TileEntityTypeInit.TARDIS.get(), ExteriorRenderer::new);
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.DALEK.get(), DalekRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.TIMELORD.get(), TimeLordRenderer::new);
 		
 		RenderTypeLookup.setRenderLayer(BlockInit.GALLIFREY_BUSH.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.GALLIFREY_SHRUB.get(), RenderType.getCutout());

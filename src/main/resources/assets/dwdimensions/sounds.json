@@ -35,12 +35,12 @@
       }
     ]
   },
-  "regeneration.regen_start": {
+  "entity.regen_start": {
     "category": "master",
-    "subtitle": "regeneration.regen_start",
+    "subtitle": "entity.regen_start",
     "sounds": [
       {
-        "name": "dwdimensions:regeneration/regen_start"
+        "name": "dwdimensions:entity/regen_start"
       }
     ]
   },

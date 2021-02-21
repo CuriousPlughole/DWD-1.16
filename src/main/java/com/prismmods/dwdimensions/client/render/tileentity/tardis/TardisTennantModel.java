@@ -1,4 +1,4 @@
-package com.prismmods.dwdimensions.client.render.model;
+package com.prismmods.dwdimensions.client.render.tileentity.tardis;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;

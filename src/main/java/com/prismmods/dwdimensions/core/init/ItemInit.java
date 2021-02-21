@@ -23,8 +23,6 @@ public class ItemInit {
     public static final RegistryObject<Item> SPAWNEGGS_ICON = ITEMS.register("icon_spawneggs", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> UTILITY_ICON = ITEMS.register("icon_utility", () -> new Item(new Item.Properties()));
 
-    
-	
 	public static final RegistryObject<Item> ZEITON_7 = ITEMS.register("zeiton_7", () -> new Item(new Item.Properties().group(ItemGroups.TAB_GALLIFREY)));
 
 }
