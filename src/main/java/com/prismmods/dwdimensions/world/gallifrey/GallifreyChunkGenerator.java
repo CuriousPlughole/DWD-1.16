@@ -4,7 +4,6 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 import com.mojang.serialization.Codec;
-import com.prismmods.dwdimensions.core.init.BiomeInit;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -18,6 +17,7 @@ import net.minecraft.world.Blockreader;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.biome.provider.SingleBiomeProvider;
 import net.minecraft.world.chunk.IChunk;
 import net.minecraft.world.gen.ChunkGenerator;
@@ -51,7 +51,7 @@ public class GallifreyChunkGenerator extends ChunkGenerator {
 	}
 	
 	public GallifreyChunkGenerator(Registry<Biome> biomes) {
-		super(new SingleBiomeProvider(biomes.getOrThrow(BiomeInit.GALLIFREY_BIOME_KEY)), new DimensionStructuresSettings(false));
+		super(new SingleBiomeProvider(biomes.getOrThrow(Biomes.BADLANDS)), new DimensionStructuresSettings(false));
 		
 		this.random = new SharedSeedRandom(0);
 		this.biomeRegistry = biomes;

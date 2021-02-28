@@ -1,10 +1,10 @@
 {
   "config": {
     "top_material": {
-      "Name": "minecraft:sand"
+      "Name": "dwdimensions:gallifrey_sand"
     },
     "under_material": {
-      "Name": "minecraft:stone"
+      "Name": "dwdimensions:gallifrey_stone"
     },
     "underwater_material": {
       "Name": "minecraft:gravel"
