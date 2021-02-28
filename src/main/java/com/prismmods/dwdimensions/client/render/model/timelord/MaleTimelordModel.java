@@ -582,7 +582,12 @@ public class MaleTimelordModel<T extends TimeLordEntity> extends BipedModel<Time
 
 	@Override
 	protected ModelRenderer getArmForSide(HandSide side) {
-		return side == HandSide.LEFT ? rightarm : leftarm;
+		return side == HandSide.LEFT ? leftarm : rightarm;
+	}
+
+	@Override
+	public void translateHand(HandSide sideIn, MatrixStack matrixStackIn) {
+		super.translateHand(sideIn, matrixStackIn);
 	}
 
 	public ModelRenderer getHead() {
