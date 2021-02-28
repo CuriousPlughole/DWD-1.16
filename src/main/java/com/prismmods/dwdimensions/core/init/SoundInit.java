@@ -17,5 +17,6 @@ public class SoundInit {
 	public static final RegistryObject<SoundEvent> TARDIS_DOOR_CLOSE = SOUNDS.register("block.tardis.door_close", () -> new SoundEvent(new ResourceLocation(DWDimensions.MOD_ID, "block.tardis.door_close")));
 	
 	public static final RegistryObject<SoundEvent> REGEN_START = SOUNDS.register("entity.regen_start", () -> new SoundEvent(new ResourceLocation(DWDimensions.MOD_ID, "entity.regen_start")));
+	public static final RegistryObject<SoundEvent> WIND = SOUNDS.register("world.wind", () -> new SoundEvent(new ResourceLocation(DWDimensions.MOD_ID, "world.wind")));
 
 }

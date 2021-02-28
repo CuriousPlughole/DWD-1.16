@@ -29,10 +29,12 @@ public class TimeLordRenderer extends MobRenderer<TimeLordEntity, MaleTimelordMo
 			IRenderTypeBuffer bufferIn, int packedLightIn) {
 		super.render(entityIn, entityYaw, partialTicks, matrixStackIn, bufferIn, packedLightIn);
 
+
 		 if(entityIn.getRegenerating()) {
-	            for (HandSide handSide : HandSide.values()) {
+			 matrixStackIn.rotate(Vector3f.XP.rotationDegrees(180));
+			 for (HandSide handSide : HandSide.values()) {
 	                matrixStackIn.push();
-	                matrixStackIn.rotate(Vector3f.XP.rotationDegrees(180));
+	                matrixStackIn.rotate(Vector3f.YP.rotation(entityYaw));
 	                matrixStackIn.translate(0,-1.6,0);
 	                entityModel.translateHand(handSide, matrixStackIn);
 	                //matrixStackIn.translate(0,-1,0);

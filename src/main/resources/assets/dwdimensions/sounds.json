@@ -26,6 +26,15 @@
       }
     ]
   },
+    "world.wind": {
+    "category": "entity",
+    "subtitle": "wind",
+    "sounds": [
+      {
+        "name": "dwdimensions:world/wind"
+      }
+    ]
+  },
   "entity.player.click": {
     "category": "master",
     "subtitle": "entity.player.click",
