@@ -29,6 +29,7 @@ public class TimeLordRenderer extends MobRenderer<TimeLordEntity, MaleTimelordMo
 			IRenderTypeBuffer bufferIn, int packedLightIn) {
 		super.render(entityIn, entityYaw, partialTicks, matrixStackIn, bufferIn, packedLightIn);
 
+		
 		 if(entityIn.getRegenerating()) {
 			 for (HandSide handSide : HandSide.values()) {
 	                matrixStackIn.push();
@@ -36,7 +37,7 @@ public class TimeLordRenderer extends MobRenderer<TimeLordEntity, MaleTimelordMo
 	                matrixStackIn.translate(0,-1.6,0);
 	                entityModel.translateHand(handSide, matrixStackIn);
 	                //matrixStackIn.translate(0,-1,0);
-	                renderColorCone(matrixStackIn, bufferIn.getBuffer(RenderType.getLightning()), packedLightIn, entityIn, 1, 1.5F, new Vector3d(1, 0.5, 0.7));
+	                renderColorCone(matrixStackIn, bufferIn.getBuffer(RenderType.getLightning()), packedLightIn, entityIn, 1, 1.5F, new Vector3d(1, 0.6, 0.3));
 	                matrixStackIn.pop();
 	            }
 	        }

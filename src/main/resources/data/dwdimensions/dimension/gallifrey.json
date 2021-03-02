@@ -1,0 +1,12 @@
+{
+  "type": "dwdimensions:gallifrey",
+  "generator": {
+	"type": "minecraft:noise",
+	"seed": 0,
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "dwdimensions:gallifrey_desert"
+    },
+	"settings": "dwdimensions:gallifrey"
+  }
+}
