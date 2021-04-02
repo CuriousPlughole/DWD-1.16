@@ -1,4 +1,4 @@
-package com.prismmods.dwdimensions.world.gallifrey.render;
+package com.prismmods.dwdimensions.world;
 
 public class SkyObject {
 	

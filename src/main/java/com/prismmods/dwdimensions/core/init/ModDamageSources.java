@@ -9,6 +9,8 @@ public class ModDamageSources {
 	public static final DamageSource RADIATION_SICKNESS = new DamageSource(DWDimensions.MOD_ID + ".radiation.sickness").setDamageBypassesArmor().setDamageIsAbsolute();
 	public static final DamageSource IRRADIATED = new DamageSource(DWDimensions.MOD_ID + ".radiation").setDamageBypassesArmor().setDamageIsAbsolute();
 	
+	public static final DamageSource TOXIC_MERCURY = new DamageSource(DWDimensions.MOD_ID + ".toxic.mercury").setDamageBypassesArmor().setDamageIsAbsolute();
+	
 	
 
 }

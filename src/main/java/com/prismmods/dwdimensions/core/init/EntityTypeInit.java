@@ -2,6 +2,8 @@ package com.prismmods.dwdimensions.core.init;
 
 import com.prismmods.dwdimensions.DWDimensions;
 import com.prismmods.dwdimensions.common.entities.DalekEntity;
+import com.prismmods.dwdimensions.common.entities.ElectricEelEntity;
+import com.prismmods.dwdimensions.common.entities.HandmineEntity;
 import com.prismmods.dwdimensions.common.entities.TimeLordEntity;
 
 import net.minecraft.entity.EntityClassification;
@@ -24,5 +26,12 @@ public class EntityTypeInit {
 			() -> EntityType.Builder.<TimeLordEntity>create(TimeLordEntity::new, EntityClassification.MONSTER)
 					.size(0.7F, 1.8f).build(new ResourceLocation(DWDimensions.MOD_ID, "timelord").toString()));
 	
+	public static final RegistryObject<EntityType<ElectricEelEntity>> ELECTRIC_EEL = ENTITIES.register("electric_eel",
+			() -> EntityType.Builder.<ElectricEelEntity>create(ElectricEelEntity::new, EntityClassification.MONSTER)
+					.size(1.0F, 0.3f).build(new ResourceLocation(DWDimensions.MOD_ID, "electric_eel").toString()));
+	
+	public static final RegistryObject<EntityType<HandmineEntity>> HANDMINE = ENTITIES.register("handmine",
+			() -> EntityType.Builder.<HandmineEntity>create(HandmineEntity::new, EntityClassification.MONSTER)
+					.size(0.3F, 0.3f).build(new ResourceLocation(DWDimensions.MOD_ID, "handmine").toString()));
 
 }

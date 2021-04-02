@@ -29,24 +29,28 @@ public class DimensionInit {
 	//Dimension
 	public static final RegistryKey<World> GALLIFREY_DIMENSION = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
 			new ResourceLocation(DWDimensions.MOD_ID, "gallifrey"));
+	public static final RegistryKey<World> SKARO_DIMENSION = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+			new ResourceLocation(DWDimensions.MOD_ID, "skaro"));
 	
 	//DimensionRenderInfo (SkyProperty)
 	public static final ResourceLocation GALLIFREY_PROPERTY_KEY = new ResourceLocation(DWDimensions.MOD_ID, "gallifrey_sky_property");
+	public static final ResourceLocation SKARO_PROPERTY_KEY = new ResourceLocation(DWDimensions.MOD_ID, "skaro_sky_property");
 
 	//NoiseSettings
 	public static RegistryKey<DimensionSettings> GALLIFREY_NOISE_SETTINGS;
+	public static RegistryKey<DimensionSettings> SKARO_NOISE_SETTINGS;
 	
 	public static final RegistryKey<DimensionType> GALLIFREY_TYPE = RegistryKey.getOrCreateKey(Registry.DIMENSION_TYPE_KEY, new ResourceLocation(DWDimensions.MOD_ID, "gallifrey"));
+	public static final RegistryKey<DimensionType> SKARO_TYPE = RegistryKey.getOrCreateKey(Registry.DIMENSION_TYPE_KEY, new ResourceLocation(DWDimensions.MOD_ID, "skaro"));
 
 	
 	/* ===Registry Methods Start=== */
-    
-	
 	/*
 	 * Register DimensionSettings in FMLCommonSetup Event 
 	 */
 	public static void registerNoiseSettings() {
 		GALLIFREY_NOISE_SETTINGS = RegistryKey.getOrCreateKey(Registry.NOISE_SETTINGS_KEY, new ResourceLocation(DWDimensions.MOD_ID, "gallifrey"));
+		SKARO_NOISE_SETTINGS = RegistryKey.getOrCreateKey(Registry.NOISE_SETTINGS_KEY, new ResourceLocation(DWDimensions.MOD_ID, "skaro"));
 	}
 	
 	/*
@@ -55,28 +59,22 @@ public class DimensionInit {
 	 */
 	public static void registerChunkGenerators() {
 		Registry.register(Registry.CHUNK_GENERATOR_CODEC, new ResourceLocation(DWDimensions.MOD_ID, "gallifrey"), GallifreyChunkGenerator.codecProvider);
+		//Registry.register(Registry.CHUNK_GENERATOR_CODEC, new ResourceLocation(DWDimensions.MOD_ID, "skaro"), GallifreyChunkGenerator.codecProvider);
 	}
 	
 	/*
 	 * Register non-dynamic dimensions in FMLServerStarting event
 	 */
-
-	
 	 public static ServerWorld registerOrGetDimensionStatic(String name, MinecraftServer server, BiFunction<MinecraftServer, RegistryKey<Dimension>, Dimension> dimension) {
 	    	ResourceLocation loc = new ResourceLocation(DWDimensions.MOD_ID, name);
 	    	RegistryKey<World> worldKey = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, loc);
 	    	ServerWorld newWorld = DimensionHelper.getOrCreateWorldStatic(server, worldKey, dimension);
 	    	return newWorld;
 	    }
-
 	
 	public static ServerWorld registerOrGetDimensionStatic(RegistryKey<World> worldKey, MinecraftServer server, BiFunction<MinecraftServer, RegistryKey<Dimension>, Dimension> dimension) {
 		ServerWorld newWorld = DimensionHelper.getOrCreateWorldStatic(server, worldKey, dimension);
 		return newWorld;
 	}
-	
-	
-	
-
 	
 }

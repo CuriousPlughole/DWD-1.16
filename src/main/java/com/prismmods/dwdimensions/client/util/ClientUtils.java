@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 import com.prismmods.dwdimensions.DWDimensions;
 import com.prismmods.dwdimensions.client.render.entity.DalekRenderer;
+import com.prismmods.dwdimensions.client.render.entity.ElectricEelRenderer;
+import com.prismmods.dwdimensions.client.render.entity.HandmineRenderer;
 import com.prismmods.dwdimensions.client.render.entity.TimeLordRenderer;
 import com.prismmods.dwdimensions.client.render.tileentity.tardis.ExteriorRenderer;
 import com.prismmods.dwdimensions.core.init.BlockInit;
@@ -41,6 +43,8 @@ public class ClientUtils {
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.DALEK.get(), DalekRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.TIMELORD.get(), TimeLordRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.ELECTRIC_EEL.get(), ElectricEelRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.HANDMINE.get(), HandmineRenderer::new);
 		
 		RenderTypeLookup.setRenderLayer(BlockInit.GALLIFREY_BUSH.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.GALLIFREY_SHRUB.get(), RenderType.getCutout());

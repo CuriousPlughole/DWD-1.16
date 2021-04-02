@@ -1,6 +1,9 @@
 package com.prismmods.dwdimensions.core.init;
 
 import com.prismmods.dwdimensions.DWDimensions;
+import com.prismmods.dwdimensions.common.blocks.HandmineTrapBlock;
+import com.prismmods.dwdimensions.common.blocks.MercuryGeyserBlock;
+import com.prismmods.dwdimensions.common.blocks.MercuryVapourBlock;
 import com.prismmods.dwdimensions.common.blocks.TardisBlock;
 import com.prismmods.dwdimensions.common.blocks.generic.ModDeadBush;
 import com.prismmods.dwdimensions.core.ItemGroups;
@@ -32,6 +35,8 @@ public class BlockInit {
 			DWDimensions.MOD_ID);
 	public static final DeferredRegister<Block> GALLIFREY_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
 			DWDimensions.MOD_ID);
+	public static final DeferredRegister<Block> SKARO_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
+			DWDimensions.MOD_ID);
 	
 	public static final RegistryObject<Block> TARDIS = BLOCKS.register("tardis", () -> new TardisBlock(Block.Properties.from(Blocks.OBSIDIAN).tickRandomly()));
 	
@@ -48,6 +53,17 @@ public class BlockInit {
     public static final RegistryObject<Block> ZEITON_ORE = GALLIFREY_BLOCKS.register("zeiton_ore",
 			() -> new Block(AbstractBlock.Properties.from(Blocks.DIAMOND_ORE).setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2)));
     
+    
+    public static final RegistryObject<Block> MERCURY_GEYSER = SKARO_BLOCKS.register("mercury_geyser", () -> new MercuryGeyserBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 6.5f)));
+    public static final RegistryObject<Block> MERCURY_VAPOUR = SKARO_BLOCKS.register("mercury_vapour", () -> new MercuryVapourBlock(Block.Properties.create(Material.BUBBLE_COLUMN).doesNotBlockMovement().noDrops()));
+    
+    public static final RegistryObject<Block> SKARO_STONE = SKARO_BLOCKS.register("skaro_stone",  () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 6.5F)));
+    public static final RegistryObject<Block> SKARO_COBBLESTONE = SKARO_BLOCKS.register("skaro_cobblestone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.5F, 7.0F)));
+    public static final RegistryObject<Block> SKARO_DIRT = SKARO_BLOCKS.register("skaro_dirt", () -> new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(0.6F, 1.0F).harvestTool(ToolType.SHOVEL).sound(SoundType.GROUND)));
+    public static final RegistryObject<Block> SKARO_GRAVEL = SKARO_BLOCKS.register("skaro_gravel", () -> new SandBlock(14406560, Block.Properties.from(Blocks.GRAVEL)));
+    public static final RegistryObject<Block> SKARO_CLAY = SKARO_BLOCKS.register("skaro_clay", () -> new Block(Block.Properties.from(Blocks.CLAY)));
+    public static final RegistryObject<Block> HANDMINE_TRAP = SKARO_BLOCKS.register("handmine_trap", () -> new HandmineTrapBlock(Block.Properties.from(Blocks.DIRT)));
+    
 	@SubscribeEvent
 	public static void registerBlockItems(RegistryEvent.Register<Item> event) {
 		final IForgeRegistry<Item> registry = event.getRegistry();
@@ -63,6 +79,15 @@ public class BlockInit {
 			final BlockItem blockItem = new BlockItem(block, properties);
 			blockItem.setRegistryName(block.getRegistryName());
 			registry.register(blockItem);
+		});
+		
+		SKARO_BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+			if(block != MERCURY_VAPOUR.get()) {
+				final Item.Properties properties = new Item.Properties().group(ItemGroups.TAB_SKARO);
+				final BlockItem blockItem = new BlockItem(block, properties);
+				blockItem.setRegistryName(block.getRegistryName());
+				registry.register(blockItem);
+			}
 		});
 		
 	}

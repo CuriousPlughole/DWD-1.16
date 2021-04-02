@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "dwdimensions:block/skaro/skaro_quicksand"
+      },
+      {
+        "model": "dwdimensions:block/skaro/skaro_quicksand",
+        "y": 90
+      },
+      {
+        "model": "dwdimensions:block/skaro/skaro_quicksand",
+        "y": 180
+      },
+      {
+        "model": "dwdimensions:block/skaro/skaro_quicksand",
+        "y": 270
+      }
+    ]
+  }
+}

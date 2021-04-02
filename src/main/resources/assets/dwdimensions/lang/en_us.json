@@ -1,4 +1,5 @@
 {
 	"death.attack.dwdimensions.radiation.sickness":"%s died from radiation sickness",
-	"death.attack.dwdimensions.radiation":"%s was heavily irradiated"
+	"death.attack.dwdimensions.radiation":"%s was heavily irradiated",
+	"death.attack.dwdimensions.toxic.mercury":"%s discovered the toxicity of mercury"
 }

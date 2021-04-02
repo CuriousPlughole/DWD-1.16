@@ -1,14 +1,14 @@
 {
-  "surface_builder": "dwdimensions:gallifrey_surface_builder",
+  "surface_builder": "dwdimensions:skaro_surface_builder",
   "depth": 0.125,
   "scale": 0.1,
   "temperature": 1,
   "downfall": 0,
   "precipitation": "rain",
-  "category": "plains",
+  "category": "desert",
   "effects": {
-    "sky_color": 14780205,
-    "fog_color": 16442309,
+    "sky_color": 8043516,
+    "fog_color": 16687772,
     "water_color": 4159204,
     "water_fog_color": 329011,
     "grass_color": 12845056,

@@ -20,7 +20,8 @@ public class ModSurfaceBuilders {
 	public static final DeferredRegister<SurfaceBuilder<?>> SURFACE_BUILDERS = DeferredRegister.create(ForgeRegistries.SURFACE_BUILDERS, DWDimensions.MOD_ID);
 	
 	public static final RegistryObject<SurfaceBuilder<SurfaceBuilderConfig>> GALLIFREY_SURFACE_BUILDER = createSurfaceBuilder("gallifrey_surface_builder", () -> new GallifreySurfaceBuilder(SurfaceBuilderConfig.field_237203_a_));
- 
+	public static final RegistryObject<SurfaceBuilder<SurfaceBuilderConfig>> SKARO_SURFACE_BUILDER = createSurfaceBuilder("skaro_surface_builder", () -> new GallifreySurfaceBuilder(SurfaceBuilderConfig.field_237203_a_));
+	
 	private static <S extends SurfaceBuilder<?>> RegistryObject<S> createSurfaceBuilder(String name, Supplier<? extends S> surfaceBuilder) {
         return SURFACE_BUILDERS.register(name, surfaceBuilder);
     }

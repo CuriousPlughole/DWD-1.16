@@ -1,0 +1,12 @@
+{
+  "type": "dwdimensions:skaro",
+  "generator": {
+	"type": "minecraft:noise",
+	"seed": 0,
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "dwdimensions:skaro_desert"
+    },
+	"settings": "dwdimensions:skaro"
+  }
+}

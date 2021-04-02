@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "dwdimensions:block/skaro/skaro_gravel"
+      },
+      {
+        "model": "dwdimensions:block/skaro/skaro_gravel",
+        "y": 90
+      },
+      {
+        "model": "dwdimensions:block/skaro/skaro_gravel",
+        "y": 180
+      },
+      {
+        "model": "dwdimensions:block/skaro/skaro_gravel",
+        "y": 270
+      }
+    ]
+  }
+}

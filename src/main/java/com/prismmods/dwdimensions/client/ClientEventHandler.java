@@ -2,12 +2,11 @@ package com.prismmods.dwdimensions.client;
 
 import com.prismmods.dwdimensions.core.init.DimensionInit;
 import com.prismmods.dwdimensions.core.init.SoundInit;
-import com.prismmods.dwdimensions.world.DimensionHelper;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SimpleSound;
 import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,7 +22,7 @@ public class ClientEventHandler {
     public static void onClientTick(TickEvent.ClientTickEvent clientTickEvent) {
         if (Minecraft.getInstance().player == null) return;
         SoundHandler sound = Minecraft.getInstance().getSoundHandler();
-        if(Minecraft.getInstance().world.getDimensionType().isSame(DimensionInit.GALLIFREY_TYPE_INSTANCE)) {
+        if(Minecraft.getInstance().world.getDimensionKey().equals(DimensionInit.GALLIFREY_DIMENSION)) {
 
             sound.stop(null, SoundCategory.MUSIC);
 

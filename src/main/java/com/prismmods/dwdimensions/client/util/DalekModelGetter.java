@@ -21,6 +21,8 @@ public class DalekModelGetter {
 	//public static String[] medium_model_types = new String[] {"assault","axis_strike_a","axis_strike_b","buzz_saw","time_war","emperor_guard","emperor_guard_2"};
 	//public static String[] small_model_types = new String[] {"chase_1965", "emperor_1967"};
 	
+	//TODO Someone needs to finish adding all the daleks for big and small models
+	
 	public static void setupLists() {
 
 		big_model_types.add("strategist");

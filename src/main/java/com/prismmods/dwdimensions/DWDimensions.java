@@ -5,6 +5,8 @@ import org.apache.logging.log4j.Logger;
 
 import com.prismmods.dwdimensions.client.util.DalekModelGetter;
 import com.prismmods.dwdimensions.common.entities.DalekEntity;
+import com.prismmods.dwdimensions.common.entities.ElectricEelEntity;
+import com.prismmods.dwdimensions.common.entities.HandmineEntity;
 import com.prismmods.dwdimensions.common.entities.TimeLordEntity;
 import com.prismmods.dwdimensions.core.init.BiomeInit;
 import com.prismmods.dwdimensions.core.init.BlockInit;
@@ -40,6 +42,7 @@ public class DWDimensions {
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
 		BlockInit.GALLIFREY_BLOCKS.register(bus);
+		BlockInit.SKARO_BLOCKS.register(bus);
 		TileEntityTypeInit.TILE_ENTITY_TYPES.register(bus);
 		EntityTypeInit.ENTITIES.register(bus);
 		EffectsInit.EFFECTS.register(bus);
@@ -54,7 +57,8 @@ public class DWDimensions {
 		DalekModelGetter.setupLists();
 		GlobalEntityTypeAttributes.put(EntityTypeInit.DALEK.get(), DalekEntity.createAttributes().create());
 		GlobalEntityTypeAttributes.put(EntityTypeInit.TIMELORD.get(), TimeLordEntity.createAttributes().create());
-		
+		GlobalEntityTypeAttributes.put(EntityTypeInit.ELECTRIC_EEL.get(), ElectricEelEntity.createAttributes().create());
+		GlobalEntityTypeAttributes.put(EntityTypeInit.HANDMINE.get(), HandmineEntity.createAttributes().create());
 		
 		event.enqueueWork(() -> {
 			DimensionInit.registerNoiseSettings();
