@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dwdimensions:block/skaro/petrified_log"
+    },
+    "axis=z": {
+      "model": "dwdimensions:block/skaro/petrified_log",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "dwdimensions:block/skaro/petrified_log",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

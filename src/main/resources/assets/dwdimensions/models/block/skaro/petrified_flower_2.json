@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "dwdimensions:blocks/skaro/petrified_flower_2"
+  }
+}

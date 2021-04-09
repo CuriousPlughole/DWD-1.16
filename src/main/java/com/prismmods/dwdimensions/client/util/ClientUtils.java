@@ -48,6 +48,17 @@ public class ClientUtils {
 		
 		RenderTypeLookup.setRenderLayer(BlockInit.GALLIFREY_BUSH.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.GALLIFREY_SHRUB.get(), RenderType.getCutout());
+		
+		RenderTypeLookup.setRenderLayer(BlockInit.SKARO_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.SKARO_PETRIFIED_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.VARGA_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.PETRIFIED_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.SKARO_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.PETRIFIED_FLOWER_1.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.PETRIFIED_FLOWER_2.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.SKARO_SHRUB_2.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.PETRIFIED_FUNGUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.SKARO_TALL_GRASS.get(), RenderType.getCutout());
 	}
 
 }

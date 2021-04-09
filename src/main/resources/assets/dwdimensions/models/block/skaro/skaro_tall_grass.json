@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "dwdimensions:blocks/skaro/skaro_tall_grass"
+  }
+}

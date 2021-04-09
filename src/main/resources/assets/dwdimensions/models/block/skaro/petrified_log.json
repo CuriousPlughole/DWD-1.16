@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "dwdimensions:blocks/skaro/petrified_log_top",
+    "side": "dwdimensions:blocks/skaro/petrified_log"
+  }
+}

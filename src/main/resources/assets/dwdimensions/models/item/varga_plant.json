@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dwdimensions:blocks/skaro/varga_plant_stage3"
+  }
+}
