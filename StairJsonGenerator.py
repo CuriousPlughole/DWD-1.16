@@ -1,8 +1,8 @@
 import json
 
-registry_name = "gallifrey_stone_stairs"
-parent_texture = "gallifrey_stone"
-subfolder = "gallifrey/"
+registry_name = "skaro_mossy_stone_brick_stairs"
+parent_texture = "skaro_mossy_stone_bricks"
+subfolder = "skaro/"
 
 blockstate = {
     "variants": {

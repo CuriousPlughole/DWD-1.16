@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"dwdimensions:radioactive_water_flowing",
+		"dwdimensions:radioactive_water_fluid"
+	]
+}

@@ -15,6 +15,7 @@ import com.prismmods.dwdimensions.core.init.BlockInit;
 import com.prismmods.dwdimensions.core.init.DimensionInit;
 import com.prismmods.dwdimensions.core.init.EffectsInit;
 import com.prismmods.dwdimensions.core.init.EntityTypeInit;
+import com.prismmods.dwdimensions.core.init.FluidInit;
 import com.prismmods.dwdimensions.core.init.ItemInit;
 import com.prismmods.dwdimensions.core.init.SoundInit;
 import com.prismmods.dwdimensions.core.init.TileEntityTypeInit;
@@ -46,6 +47,7 @@ public class DWDimensions {
 
 		SoundInit.SOUNDS.register(bus);
 		ItemInit.ITEMS.register(bus);
+		FluidInit.FLUIDS.register(bus);
 		BlockInit.BLOCKS.register(bus);
 		BlockInit.GALLIFREY_BLOCKS.register(bus);
 		BlockInit.SKARO_BLOCKS.register(bus);

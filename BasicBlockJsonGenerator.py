@@ -1,7 +1,7 @@
 import json
 
-blocks_to_add = ["gallifrey_stone", "gallifrey_stone_stairs", "gallifrey_stone_wall", "gallifrey_stone_slab"]
-subfolder= "gallifrey/" #eg "gallifrey/" Dont forget the / at the end!!!
+blocks_to_add = ["skaro_bricks", "skaro_dalekanium_ore", "skaro_uranium_ore", "skaro_sulphur_ore", "skaro_bush", "skaro_quicksand"]
+subfolder= "skaro/" #eg "gallifrey/" Dont forget the / at the end!!!
 
 for registry_name in blocks_to_add:
     blockstate = {

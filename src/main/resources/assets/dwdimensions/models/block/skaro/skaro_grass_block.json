@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "dwdimensions:blocks/skaro/skaro_dirt",
+    "down": "dwdimensions:blocks/skaro/skaro_dirt",
+    "up": "dwdimensions:blocks/skaro/skaro_grass_top",
+    "north": "dwdimensions:blocks/skaro/skaro_grass_side",
+    "east": "dwdimensions:blocks/skaro/skaro_grass_side",
+    "south": "dwdimensions:blocks/skaro/skaro_grass_side",
+    "west": "dwdimensions:blocks/skaro/skaro_grass_side"
+  }
+}

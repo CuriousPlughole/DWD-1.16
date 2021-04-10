@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "dwdimensions:blocks/skaro/skaro_stone",
+        "top": "dwdimensions:blocks/skaro/skaro_stone",
+        "side": "dwdimensions:blocks/skaro/skaro_stone"
+    }
+}

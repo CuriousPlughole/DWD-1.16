@@ -1,7 +1,7 @@
 {
-  "variants": {
-    "": {
-      "model": "dwdimensions:block/skaro_dalekanium_ore"
+    "variants": {
+        "": {
+            "model": "dwdimensions:block/skaro/skaro_dalekanium_ore"
+        }
     }
-  }
 }

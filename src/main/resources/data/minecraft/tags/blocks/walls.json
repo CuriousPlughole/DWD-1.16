@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
-    "dwdimensions:gallifrey_stone_wall"
+    "dwdimensions:gallifrey_stone_wall",
+    "dwdimensions:skaro_stone_wall",
+    "dwdimensions:skaro_cobblestone_wall",
+    "dwdimensions:skaro_stone_brick_wall",
+	"dwdimensions:skaro_mossy_stone_brick_wall",
+    "dwdimensions:skaro_brick_wall"
   ]
 }

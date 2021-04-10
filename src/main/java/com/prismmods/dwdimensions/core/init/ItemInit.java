@@ -4,6 +4,7 @@ import com.prismmods.dwdimensions.DWDimensions;
 import com.prismmods.dwdimensions.core.ItemGroups;
 
 import net.minecraft.item.BlockNamedItem;
+import net.minecraft.item.BucketItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.potion.EffectInstance;
@@ -43,5 +44,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> VARGA_BERRIES = ITEMS.register("varga_berries",
 			() -> new BlockNamedItem(BlockInit.VARGA_PLANT.get(), (new Item.Properties().food(new Food.Builder()
 					.hunger(1).saturation(0.5f).effect(new EffectInstance(Effects.POISON, 600, 2), 1.0f).build()))));
+	
+	public static final RegistryObject<BucketItem> RADIOACTIVE_WATER_BUCKET = ITEMS.register("radioactive_water_bucket", () -> new BucketItem(() -> FluidInit.RADIOACTIVE_WATER_FLUID.get(), new Item.Properties().group(ItemGroups.TAB_UTILITY).maxStackSize(1))); 
 
 }

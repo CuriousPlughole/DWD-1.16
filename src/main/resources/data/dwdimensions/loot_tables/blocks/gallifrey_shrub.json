@@ -1,19 +1,44 @@
 {
-    "type": "minecraft:block",
-    "pools": [
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1.0,
-            "entries": [
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
                 {
-                    "type": "minecraft:item",
-                    "name": "dwdimensions:gallifrey_shrub"
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "item": "minecraft:shears"
+                  }
                 }
-            ],
-            "conditions": [
+              ],
+              "name": "dwdimensions:gallifrey_shrub"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
                 {
-                    "condition": "minecraft:survives_explosion"
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 0.0,
+                    "max": 2.0,
+                    "type": "minecraft:uniform"
+                  }
+                },
+                {
+                  "function": "minecraft:explosion_decay"
                 }
-            ]
+              ],
+              "name": "minecraft:stick"
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

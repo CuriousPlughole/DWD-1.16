@@ -1,19 +1,43 @@
 {
-    "type": "minecraft:block",
-    "pools": [
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1.0,
-            "entries": [
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
                 {
-                    "type": "minecraft:item",
-                    "name": "dwdimensions:gallifrey_stone"
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
                 }
-            ],
-            "conditions": [
+              ],
+              "name": "dwdimensions:gallifrey_stone"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
                 {
-                    "condition": "minecraft:survives_explosion"
+                  "condition": "minecraft:survives_explosion"
                 }
-            ]
+              ],
+              "name": "dwdimensions:gallifrey_cobblestone"
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "dwdimensions:blocks/skaro/skaro_bricks",
+        "top": "dwdimensions:blocks/skaro/skaro_bricks",
+        "side": "dwdimensions:blocks/skaro/skaro_bricks"
+    }
+}

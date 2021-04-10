@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "dwdimensions:blocks/skaroskaro_stone_bricks",
+        "top": "dwdimensions:blocks/skaroskaro_stone_bricks",
+        "side": "dwdimensions:blocks/skaroskaro_stone_bricks"
+    }
+}

@@ -1,7 +1,7 @@
 {
-  "variants": {
-    "": {
-      "model": "dwdimensions:block/skaro_grass_block"
+    "variants": {
+        "": {
+            "model": "dwdimensions:block/skaro/skaro_grass_block"
+        }
     }
-  }
 }

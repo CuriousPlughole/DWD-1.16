@@ -17,6 +17,7 @@ import com.prismmods.dwdimensions.world.feature.tree.PetrifiedTree;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.SandBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
@@ -90,6 +91,9 @@ public class BlockInit {
     public static final RegistryObject<Block> SKARO_BRICK_STAIRS = SKARO_BLOCKS.register("skaro_brick_stairs", () -> new StairsBlock(() -> BlockInit.SKARO_BRICKS.get().getDefaultState(), Block.Properties.from(Blocks.BRICK_STAIRS)));
     public static final RegistryObject<Block> SKARO_BRICK_WALL = SKARO_BLOCKS.register("skaro_brick_wall", () -> new WallBlock(Block.Properties.from(Blocks.BRICK_WALL)));
     public static final RegistryObject<Block> SKARO_BRICK_SLAB = SKARO_BLOCKS.register("skaro_brick_slab", () -> new SlabBlock(Block.Properties.from(Blocks.BRICK_SLAB)));
+    public static final RegistryObject<Block> SKARO_MOSSY_STONE_BRICK_STAIRS = SKARO_BLOCKS.register("skaro_mossy_stone_brick_stairs", () -> new StairsBlock(() -> BlockInit.SKARO_MOSSY_STONE_BRICKS.get().getDefaultState(), Block.Properties.from(Blocks.BRICK_STAIRS)));
+    public static final RegistryObject<Block> SKARO_MOSSY_STONE_BRICK_WALL = SKARO_BLOCKS.register("skaro_mossy_stone_brick_wall", () -> new WallBlock(Block.Properties.from(Blocks.BRICK_WALL)));
+    public static final RegistryObject<Block> SKARO_MOSSY_STONE_BRICK_SLAB = SKARO_BLOCKS.register("skaro_mossy_stone_brick_slab", () -> new SlabBlock(Block.Properties.from(Blocks.BRICK_SLAB)));
     //Ores or materials
     public static final RegistryObject<Block> SKARO_DALEKANIUM_ORE = SKARO_BLOCKS.register("skaro_dalekanium_ore", () -> new Block(Block.Properties.from(Blocks.OBSIDIAN)));
     public static final RegistryObject<Block> SKARO_URANIUM_ORE = SKARO_BLOCKS.register("skaro_uranium_ore", () -> new Block(Block.Properties.from(Blocks.IRON_ORE)));
@@ -132,7 +136,7 @@ public class BlockInit {
 			registry.register(blockItem);
 		});
 		
-		SKARO_BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+		SKARO_BLOCKS.getEntries().stream().filter(block -> !(block.get() instanceof FlowingFluidBlock)).map(RegistryObject::get).forEach(block -> {
 			if(block != MERCURY_VAPOUR.get()) {
 				final Item.Properties properties = new Item.Properties().group(ItemGroups.TAB_SKARO);
 				final BlockItem blockItem = new BlockItem(block, properties);
