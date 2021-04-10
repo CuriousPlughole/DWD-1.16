@@ -15,6 +15,7 @@ import com.prismmods.dwdimensions.core.init.BlockInit;
 import com.prismmods.dwdimensions.core.init.DimensionInit;
 import com.prismmods.dwdimensions.core.init.EffectsInit;
 import com.prismmods.dwdimensions.core.init.EntityTypeInit;
+import com.prismmods.dwdimensions.core.init.FeatureInit;
 import com.prismmods.dwdimensions.core.init.FluidInit;
 import com.prismmods.dwdimensions.core.init.ItemInit;
 import com.prismmods.dwdimensions.core.init.SoundInit;
@@ -45,6 +46,8 @@ public class DWDimensions {
 		bus.addListener(this::setup);
 		// bus.addListener(this::gatherData);
 
+		MinecraftForge.EVENT_BUS.register(this);
+		
 		SoundInit.SOUNDS.register(bus);
 		ItemInit.ITEMS.register(bus);
 		FluidInit.FLUIDS.register(bus);
@@ -57,8 +60,7 @@ public class DWDimensions {
 
 		ModSurfaceBuilders.SURFACE_BUILDERS.register(bus);
 		BiomeInit.BIOMES.register(bus);
-
-		MinecraftForge.EVENT_BUS.register(this);
+		FeatureInit.FEATURES.register(bus);
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
@@ -78,6 +80,7 @@ public class DWDimensions {
 		GlobalEntityTypeAttributes.put(EntityTypeInit.HANDMINE.get(), HandmineEntity.createAttributes().create());
 
 		event.enqueueWork(() -> {
+			FeatureInit.registerConfiguredFeatures();
 			DimensionInit.registerNoiseSettings();
 			DimensionInit.registerChunkGenerators();
 			BiomeInit.registerBiomeKeys();

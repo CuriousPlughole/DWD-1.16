@@ -9,6 +9,7 @@ import com.prismmods.dwdimensions.common.blocks.VargaPlantBushBlock;
 import com.prismmods.dwdimensions.common.blocks.generic.ModDeadBush;
 import com.prismmods.dwdimensions.common.blocks.generic.ModLeavesBlock;
 import com.prismmods.dwdimensions.common.blocks.generic.ModLogBlock;
+import com.prismmods.dwdimensions.common.blocks.generic.ModPetrifiedPlant;
 import com.prismmods.dwdimensions.common.blocks.generic.ModSaplingBlock;
 import com.prismmods.dwdimensions.common.blocks.generic.QuicksandBlock;
 import com.prismmods.dwdimensions.core.ItemGroups;
@@ -102,10 +103,10 @@ public class BlockInit {
     public static final RegistryObject<Block> SKARO_SHRUB = SKARO_BLOCKS.register("skaro_shrub", () -> new ModDeadBush(Block.Properties.from(Blocks.DEAD_BUSH)));
     public static final RegistryObject<Block> SKARO_PETRIFIED_SHRUB = SKARO_BLOCKS.register("skaro_petrified_shrub", () -> new ModDeadBush(Block.Properties.from(Blocks.DEAD_BUSH)));
     public static final RegistryObject<Block> VARGA_PLANT = SKARO_BLOCKS.register("varga_plant", () -> new VargaPlantBushBlock(Block.Properties.create(Material.PLANTS).tickRandomly().doesNotBlockMovement().sound(SoundType.SWEET_BERRY_BUSH)));
-    public static final RegistryObject<Block> PETRIFIED_FLOWER_1 = SKARO_BLOCKS.register("petrified_flower_1", () -> new ModDeadBush(Block.Properties.from(Blocks.DEAD_BUSH)));
-    public static final RegistryObject<Block> PETRIFIED_FLOWER_2 = SKARO_BLOCKS.register("petrified_flower_2", () -> new ModDeadBush(Block.Properties.from(Blocks.DEAD_BUSH)));
+    public static final RegistryObject<Block> PETRIFIED_FLOWER_1 = SKARO_BLOCKS.register("petrified_flower_1", () -> new ModPetrifiedPlant(Block.Properties.from(Blocks.DEAD_BUSH).setLightLevel((state) -> {return 5;})));
+    public static final RegistryObject<Block> PETRIFIED_FLOWER_2 = SKARO_BLOCKS.register("petrified_flower_2", () -> new ModPetrifiedPlant(Block.Properties.from(Blocks.DEAD_BUSH).setLightLevel((state) -> {return 5;})));
     public static final RegistryObject<Block> SKARO_SHRUB_2 = SKARO_BLOCKS.register("skaro_shrub_2", () -> new ModDeadBush(Block.Properties.from(Blocks.DEAD_BUSH)));
-    public static final RegistryObject<Block> PETRIFIED_FUNGUS = SKARO_BLOCKS.register("petrified_fungus", () -> new ModDeadBush(Block.Properties.from(Blocks.DEAD_BUSH)));
+    public static final RegistryObject<Block> PETRIFIED_FUNGUS = SKARO_BLOCKS.register("petrified_fungus", () -> new ModPetrifiedPlant(Block.Properties.from(Blocks.DEAD_BUSH).setLightLevel((state) -> {return 5;})));
     public static final RegistryObject<Block> SKARO_TALL_GRASS = SKARO_BLOCKS.register("skaro_tall_grass", () -> new ModDeadBush(Block.Properties.from(Blocks.DEAD_BUSH)));
     public static final RegistryObject<Block> SKARO_BUSH = SKARO_BLOCKS.register("skaro_bush", () -> new Block(Block.Properties.from(Blocks.OAK_LEAVES)));
     //Trees

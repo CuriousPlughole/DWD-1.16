@@ -1,13 +1,13 @@
 {
   "config": {
     "top_material": {
-      "Name": "dwdimensions:gallifrey_sand"
+      "Name": "dwdimensions:skaro_grass_block"
     },
     "under_material": {
-      "Name": "dwdimensions:skaro_sand"
+      "Name": "dwdimensions:skaro_dirt"
     },
     "underwater_material": {
-      "Name": "minecraft:gravel"
+      "Name": "dwdimensions:skaro_stone"
     }
   },
   "type": "dwdimensions:skaro_surface_builder"

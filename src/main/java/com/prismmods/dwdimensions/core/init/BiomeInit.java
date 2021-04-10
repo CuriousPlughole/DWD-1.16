@@ -28,6 +28,11 @@ public class BiomeInit {
 	
 	//SKARO BIOMES
 	public static final RegistryObject<Biome> SKARO_DESERT = BIOMES.register("skaro_desert", () -> BiomeMaker.makeVoidBiome());
+	public static final RegistryObject<Biome> SKARO_PETRIFIED_FOREST = BIOMES.register("skaro_petrified_forest", () -> BiomeMaker.makeVoidBiome());
+	//public static final RegistryObject<Biome> SKARO_MOUNTAINS = BIOMES.register("skaro_mountains", () -> BiomeMaker.makeVoidBiome());
+	//public static final RegistryObject<Biome> SKARO_GEYSER_SWAMP = BIOMES.register("skaro_geyser_swamp", () -> BiomeMaker.makeVoidBiome());
+	//public static final RegistryObject<Biome> SKARO_TUNDRA = BIOMES.register("skaro_tundra", () -> BiomeMaker.makeVoidBiome());
+
 	
 	public static void registerBiomeKeys() {
 		GALLIFREY_BIOME_KEY = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation(DWDimensions.MOD_ID, "gallifrey_desert"));
