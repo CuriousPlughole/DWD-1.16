@@ -14,9 +14,22 @@
     "grass_color": 12845056,
     "foliage_color": 16384771
   },
-  "starts": [],
+  "starts": [
+	"dwdimensions:skaro_outpost"
+  ],
   "spawners": {},
   "spawn_costs": {},
   "carvers": {"air":["minecraft:cave"]},
-  "features": []
+  "features": [
+	  [],
+	  ["dwdimensions:skaro_quicksand_pool"],
+	  [],
+	  [],
+	  [],
+	  [],
+	  [],
+	  [],
+	  [],
+	  []
+  ]
 }

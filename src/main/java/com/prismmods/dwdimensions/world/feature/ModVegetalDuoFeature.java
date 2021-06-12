@@ -40,7 +40,7 @@ public class ModVegetalDuoFeature extends Feature<ProbabilityConfig> {
 			int k = reader.getHeight(Heightmap.Type.WORLD_SURFACE, pos.getX() + i, pos.getZ() + j);
 
 			BlockPos blockpos = new BlockPos(pos.getX() + i, k, pos.getZ() + j);
-			if (reader.getBlockState(blockpos).isIn(Blocks.AIR)) {
+			if (reader.getBlockState(blockpos).matchesBlock(Blocks.AIR)) {
 				BlockState blockstate = rand.nextBoolean() ? this.blockType1.getDefaultState() : this.blockType2.getDefaultState();
 				if (blockstate.isValidPosition(reader, blockpos)) {
 

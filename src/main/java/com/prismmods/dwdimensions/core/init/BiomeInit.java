@@ -25,7 +25,6 @@ public class BiomeInit {
 	//GALLIFREY BIOMES
 	public static final RegistryObject<Biome> GALLIFREY_DESERT = BIOMES.register("gallifrey_desert", () -> BiomeMaker.makeVoidBiome());
 	
-	
 	//SKARO BIOMES
 	public static final RegistryObject<Biome> SKARO_DESERT = BIOMES.register("skaro_desert", () -> BiomeMaker.makeVoidBiome());
 	public static final RegistryObject<Biome> SKARO_PETRIFIED_FOREST = BIOMES.register("skaro_petrified_forest", () -> BiomeMaker.makeVoidBiome());
@@ -37,6 +36,7 @@ public class BiomeInit {
 	public static void registerBiomeKeys() {
 		GALLIFREY_BIOME_KEY = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation(DWDimensions.MOD_ID, "gallifrey_desert"));
 		SKARO_BIOME_KEY = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation(DWDimensions.MOD_ID, "skaro_desert"));
+		
 	}
 	
 	public static RegistryObject<Biome> createBiome(String name, Supplier<Biome> biome) {

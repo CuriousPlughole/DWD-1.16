@@ -12,6 +12,7 @@ import com.prismmods.dwdimensions.common.entities.HandmineEntity;
 import com.prismmods.dwdimensions.common.entities.TimeLordEntity;
 import com.prismmods.dwdimensions.core.init.BiomeInit;
 import com.prismmods.dwdimensions.core.init.BlockInit;
+import com.prismmods.dwdimensions.core.init.CarverInit;
 import com.prismmods.dwdimensions.core.init.DimensionInit;
 import com.prismmods.dwdimensions.core.init.EffectsInit;
 import com.prismmods.dwdimensions.core.init.EntityTypeInit;
@@ -21,6 +22,7 @@ import com.prismmods.dwdimensions.core.init.ItemInit;
 import com.prismmods.dwdimensions.core.init.SoundInit;
 import com.prismmods.dwdimensions.core.init.TileEntityTypeInit;
 import com.prismmods.dwdimensions.world.ModSurfaceBuilders;
+import com.prismmods.dwdimensions.world.skaro.SkaroStructures;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
@@ -60,6 +62,8 @@ public class DWDimensions {
 
 		ModSurfaceBuilders.SURFACE_BUILDERS.register(bus);
 		BiomeInit.BIOMES.register(bus);
+		CarverInit.CARVERS.register(bus);
+		SkaroStructures.SKARO_STRUCTURES.register(bus);
 		FeatureInit.FEATURES.register(bus);
 	}
 
@@ -81,6 +85,8 @@ public class DWDimensions {
 
 		event.enqueueWork(() -> {
 			FeatureInit.registerConfiguredFeatures();
+			SkaroStructures.setupStructures();
+			SkaroStructures.ConfiguredStructures.registerConfiguredStructures();
 			DimensionInit.registerNoiseSettings();
 			DimensionInit.registerChunkGenerators();
 			BiomeInit.registerBiomeKeys();

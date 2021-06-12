@@ -38,6 +38,12 @@
     }
   },
   "structures": {
-    "structures": {}
+    "structures": {
+		"dwdimensions:skaro_outpost": {
+			"spacing": 50,
+			"separation": 20,
+			"salt": 0
+		}
+	}
   }
 }

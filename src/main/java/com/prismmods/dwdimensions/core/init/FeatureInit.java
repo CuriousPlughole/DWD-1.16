@@ -4,6 +4,7 @@ import com.prismmods.dwdimensions.DWDimensions;
 import com.prismmods.dwdimensions.world.feature.ModVegetalDuoFeature;
 import com.prismmods.dwdimensions.world.feature.ModVegetalPatchFeature;
 import com.prismmods.dwdimensions.world.feature.ModVegetalSingleFeature;
+import com.prismmods.dwdimensions.world.feature.QuickSandPoolFeature;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
@@ -48,6 +49,8 @@ public class FeatureInit {
 			"varga_plant",
 			() -> new ModVegetalSingleFeature(ProbabilityConfig.CODEC, BlockInit.VARGA_PLANT.get()));
 	
+	public static final RegistryObject<Feature<ProbabilityConfig>> QUICKSAND_POOL = FEATURES.register("skaro_quicksand_pool", () -> new QuickSandPoolFeature(ProbabilityConfig.CODEC));
+	
 	// TREES
 	public static final RegistryObject<Feature<BaseTreeFeatureConfig>> PETRIFIED_TREE = FEATURES
 			.register("petrified_tree", () -> new TreeFeature(BaseTreeFeatureConfig.CODEC));
@@ -55,6 +58,10 @@ public class FeatureInit {
 	public static class ConfiguredFeatures {
 
 		// For ChanceConfig a lower integer means more probable
+		public static final ConfiguredFeature<?, ?> CONFIGURED_QUICKSAND_POOL = QUICKSAND_POOL.get()
+				.withConfiguration(new ProbabilityConfig(0.2F))
+				.withPlacement(Placement.CHANCE.configure(new ChanceConfig(6))).square();
+		
 		public static final ConfiguredFeature<?, ?> CONFIGURED_SKARO_TALL_GRASS = SKARO_TALL_GRASS.get()
 				.withConfiguration(new ProbabilityConfig(0.9F))
 				.withPlacement(Placement.CHANCE.configure(new ChanceConfig(2))).square();
@@ -79,8 +86,8 @@ public class FeatureInit {
 				.withConfiguration((new BaseTreeFeatureConfig.Builder(
 						new SimpleBlockStateProvider(BlockInit.PETRIFIED_LOG.get().getDefaultState()),
 						new SimpleBlockStateProvider(BlockInit.PETRIFIED_LEAVES.get().getDefaultState()),
-						new SpruceFoliagePlacer(FeatureSpread.func_242253_a(2, 1), FeatureSpread.func_242253_a(0, 2),
-								FeatureSpread.func_242253_a(1, 1)),
+						new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
+								FeatureSpread.create(1, 1)),
 						new StraightTrunkPlacer(5, 2, 1), new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build())
 				.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
 				.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1)));
@@ -89,6 +96,7 @@ public class FeatureInit {
 	public static void registerConfiguredFeatures() {
 		registerConfiguredFeature("petrified_tree", ConfiguredFeatures.CONFIGURED_PETRIFIED_TREE);
 
+		registerConfiguredFeature("skaro_quicksand_pool", ConfiguredFeatures.CONFIGURED_QUICKSAND_POOL);
 		registerConfiguredFeature("skaro_tall_grass", ConfiguredFeatures.CONFIGURED_SKARO_TALL_GRASS);
 		registerConfiguredFeature("petrified_fungus", ConfiguredFeatures.CONFIGURED_PETRIFIED_FUNGUS);
 		registerConfiguredFeature("varga_plant", ConfiguredFeatures.CONFIGURED_VARGA_PLANT);

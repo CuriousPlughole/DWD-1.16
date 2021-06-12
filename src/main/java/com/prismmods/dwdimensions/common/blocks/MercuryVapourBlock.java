@@ -38,7 +38,7 @@ public class MercuryVapourBlock extends Block implements IBucketPickupHandler {
 
 	public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
 		BlockState blockstate = worldIn.getBlockState(pos.down());
-		return blockstate.isIn(BlockInit.MERCURY_GEYSER.get()) || blockstate.isIn(BlockInit.MERCURY_VAPOUR.get());
+		return blockstate.matchesBlock(BlockInit.MERCURY_GEYSER.get()) || blockstate.matchesBlock(BlockInit.MERCURY_VAPOUR.get());
 	}
 
 	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
@@ -102,7 +102,7 @@ public class MercuryVapourBlock extends Block implements IBucketPickupHandler {
 	}
 
 	public static boolean canHoldVapourColumn(IWorld world, BlockPos pos) {
-		return world.getBlockState(pos).isIn(Blocks.AIR);
+		return world.getBlockState(pos).matchesBlock(Blocks.AIR);
 	}
 
 	/**
@@ -156,7 +156,7 @@ public class MercuryVapourBlock extends Block implements IBucketPickupHandler {
 
 			if (facing == Direction.DOWN) {
 				worldIn.setBlockState(currentPos, BlockInit.MERCURY_VAPOUR.get().getDefaultState(), 2);
-			} else if (facing == Direction.UP && !facingState.isIn(BlockInit.MERCURY_VAPOUR.get())
+			} else if (facing == Direction.UP && !facingState.matchesBlock(BlockInit.MERCURY_VAPOUR.get())
 					&& canHoldVapourColumn(worldIn, facingPos)) {
 				worldIn.getPendingBlockTicks().scheduleTick(currentPos, this, 5);
 			}

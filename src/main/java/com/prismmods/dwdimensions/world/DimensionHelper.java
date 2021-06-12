@@ -63,7 +63,7 @@ public class DimensionHelper {
 
 		ServerWorld newWorld = new ServerWorld(server, executor, levelSave, worldInfo, worldKey,
 				dimension.getDimensionType(), chunkListener, dimension.getChunkGenerator(), 
-				dimensionGenSettings.func_236227_h_(), //this boolean is is-debug-world
+				dimensionGenSettings.hasDebugChunkGenerator(), //this boolean is is-debug-world ??????
 				BiomeManager.getHashedSeed(dimensionGenSettings.getSeed()), 
 				ImmutableList.of(), //Special spawn list
 				false); //"tick time" true for overworld only

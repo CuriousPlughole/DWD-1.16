@@ -47,7 +47,7 @@ public class GallifreyChunkGenerator extends ChunkGenerator {
 	protected final BlockState defaultFluid;
 
 	public GallifreyChunkGenerator(MinecraftServer server) {
-		this(server.func_244267_aX().getRegistry(Registry.BIOME_KEY));
+		this(server.getDynamicRegistries().getRegistry(Registry.BIOME_KEY));
 	}
 	
 	public GallifreyChunkGenerator(Registry<Biome> biomes) {

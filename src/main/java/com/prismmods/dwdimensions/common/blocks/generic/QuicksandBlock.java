@@ -1,5 +1,6 @@
 package com.prismmods.dwdimensions.common.blocks.generic;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -10,7 +11,7 @@ import net.minecraftforge.common.ToolType;
 
 public class QuicksandBlock extends Block{
 
-	public QuicksandBlock(Properties properties) {
+	public QuicksandBlock(AbstractBlock.Properties properties) {
 		super(properties);
 	}
 	
@@ -28,5 +29,6 @@ public class QuicksandBlock extends Block{
     public int getHarvestLevel(BlockState state) {
         return 1;
     }
+
 
 }

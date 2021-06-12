@@ -30,7 +30,7 @@ public class PetrifiedTree extends Tree {
 			Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(
 					new SimpleBlockStateProvider(BlockInit.PETRIFIED_LOG.get().getDefaultState()),
 					new SimpleBlockStateProvider(BlockInit.PETRIFIED_LEAVES.get().getDefaultState()),
-					new SpruceFoliagePlacer(FeatureSpread.func_242253_a(2,1),FeatureSpread.func_242253_a(0,2),FeatureSpread.func_242253_a(1,1)),
+					new SpruceFoliagePlacer(FeatureSpread.create(2,1),FeatureSpread.create(0,2),FeatureSpread.create(1,1)),
 					new StraightTrunkPlacer(5,2,1),new TwoLayerFeature(2,0,2))).setIgnoreVines().build()));
 
 	private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key,
