@@ -1,0 +1,14 @@
+{
+  "config": {
+    "top_material": {
+      "Name": "dwdimensions:skaro_stone"
+    },
+    "under_material": {
+      "Name": "dwdimensions:skaro_cobblestone"
+    },
+    "underwater_material": {
+      "Name": "dwdimensions:skaro_stone"
+    }
+  },
+  "type": "dwdimensions:skaro_surface_builder"
+}

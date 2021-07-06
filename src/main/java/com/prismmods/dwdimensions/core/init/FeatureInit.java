@@ -1,6 +1,7 @@
 package com.prismmods.dwdimensions.core.init;
 
 import com.prismmods.dwdimensions.DWDimensions;
+import com.prismmods.dwdimensions.world.feature.GeyserFeature;
 import com.prismmods.dwdimensions.world.feature.ModVegetalDuoFeature;
 import com.prismmods.dwdimensions.world.feature.ModVegetalPatchFeature;
 import com.prismmods.dwdimensions.world.feature.ModVegetalSingleFeature;
@@ -54,10 +55,20 @@ public class FeatureInit {
 	// TREES
 	public static final RegistryObject<Feature<BaseTreeFeatureConfig>> PETRIFIED_TREE = FEATURES
 			.register("petrified_tree", () -> new TreeFeature(BaseTreeFeatureConfig.CODEC));
+	
+	//OTHER
+	public static final RegistryObject<Feature<ProbabilityConfig>> GEYSER_PATCH = FEATURES.register("skaro_geyser_patch", () -> new GeyserFeature(ProbabilityConfig.CODEC));
+	
+	//85 80 -214
 
 	public static class ConfiguredFeatures {
 
 		// For ChanceConfig a lower integer means more probable
+		
+		public static final ConfiguredFeature<?, ?> CONFIGURED_GEYSER_PATCH = GEYSER_PATCH.get()
+				.withConfiguration(new ProbabilityConfig(0.4F))
+				.withPlacement(Placement.CHANCE.configure(new ChanceConfig(6))).square();
+		
 		public static final ConfiguredFeature<?, ?> CONFIGURED_QUICKSAND_POOL = QUICKSAND_POOL.get()
 				.withConfiguration(new ProbabilityConfig(0.2F))
 				.withPlacement(Placement.CHANCE.configure(new ChanceConfig(6))).square();
@@ -95,7 +106,7 @@ public class FeatureInit {
 
 	public static void registerConfiguredFeatures() {
 		registerConfiguredFeature("petrified_tree", ConfiguredFeatures.CONFIGURED_PETRIFIED_TREE);
-
+		registerConfiguredFeature("skaro_geyser_patch", ConfiguredFeatures.CONFIGURED_GEYSER_PATCH);
 		registerConfiguredFeature("skaro_quicksand_pool", ConfiguredFeatures.CONFIGURED_QUICKSAND_POOL);
 		registerConfiguredFeature("skaro_tall_grass", ConfiguredFeatures.CONFIGURED_SKARO_TALL_GRASS);
 		registerConfiguredFeature("petrified_fungus", ConfiguredFeatures.CONFIGURED_PETRIFIED_FUNGUS);

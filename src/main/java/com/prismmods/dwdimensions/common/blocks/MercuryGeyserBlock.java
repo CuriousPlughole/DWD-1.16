@@ -8,8 +8,11 @@ import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
@@ -29,11 +32,25 @@ public class MercuryGeyserBlock extends Block {
 		if (!entityIn.isImmuneToFire() && entityIn instanceof LivingEntity
 				&& !EnchantmentHelper.hasFrostWalker((LivingEntity) entityIn)) {
 			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
+			entityIn.setMotion(entityIn.getMotion().add(0.0D, 1.0D, 0.0d));
+			
+			double d0 = (double) pos.getX();
+			double d1 = (double) pos.getY();
+			double d2 = (double) pos.getZ();
+			Random rand = new Random();
+			worldIn.addOptionalParticle(ParticleTypes.EXPLOSION, d0 + (double) rand.nextFloat(),
+					d1 + (double) rand.nextFloat(), d2 + (double) rand.nextFloat(), 0.0D, 0.04D, 0.0D);
+			worldIn.addOptionalParticle(ParticleTypes.DRIPPING_WATER, d0 + (double) rand.nextFloat(),
+					d1 + (double) rand.nextFloat(), d2 + (double) rand.nextFloat(), 0.0D, 0.04D, 0.0D);
+			worldIn.playSound(d0, d1, d2, SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.BLOCKS,
+					0.05F + rand.nextFloat() * 0.2F, 0.9F + rand.nextFloat() * 0.15F, false);
 		}
 
 		super.onEntityWalk(worldIn, pos, entityIn);
 	}
 
+
+	
 	public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
 		MercuryVapourBlock.placeVapourColumn(worldIn, pos.up());
 	}

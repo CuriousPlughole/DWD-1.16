@@ -44,7 +44,7 @@ public class GallifreySkyProperty extends DimensionRenderInfo {
 	
 	@Override
 	public ISkyRenderHandler getSkyRenderHandler() {
-		return new GallifreySkyRenderer();
+		return GallifreySkyRenderer.INSTANCE;
 	}
 	
 	@Override

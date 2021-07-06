@@ -20,7 +20,7 @@ public class SetupEvents {
 	
 	@SubscribeEvent
 	public static void onBiomeLoad(BiomeLoadingEvent event) {
-		System.out.println(event.getName().getNamespace());
+		//System.out.println(event.getName().getNamespace());
 		
 		if(event.getName().getNamespace().equals(DWDimensions.MOD_ID)) {
 			

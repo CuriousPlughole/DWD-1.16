@@ -115,7 +115,7 @@ public class BlockInit {
     public static final RegistryObject<Block> PETRIFIED_LEAVES = SKARO_BLOCKS.register("petrified_leaves", () -> new ModLeavesBlock(Block.Properties.from((Blocks.OAK_LEAVES))));
     public static final RegistryObject<Block> PETRIFIED_SAPLING = SKARO_BLOCKS.register("petrified_sapling", () -> new ModSaplingBlock(new PetrifiedTree(), Block.Properties.from(Blocks.OAK_SAPLING)));
     //Special Blocks
-    public static final RegistryObject<Block> MERCURY_GEYSER = SKARO_BLOCKS.register("mercury_geyser", () -> new MercuryGeyserBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 6.5f)));
+    public static final RegistryObject<Block> MERCURY_GEYSER = SKARO_BLOCKS.register("mercury_geyser", () -> new MercuryGeyserBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 6.5f).tickRandomly()));
     public static final RegistryObject<Block> MERCURY_VAPOUR = SKARO_BLOCKS.register("mercury_vapour", () -> new MercuryVapourBlock(Block.Properties.create(Material.BUBBLE_COLUMN).doesNotBlockMovement().noDrops()));
     public static final RegistryObject<Block> HANDMINE_TRAP = SKARO_BLOCKS.register("handmine_trap", () -> new HandmineTrapBlock(Block.Properties.from(Blocks.DIRT)));
     public static final RegistryObject<Block> SKARO_QUICKSAND = SKARO_BLOCKS.register("skaro_quicksand", () -> new QuicksandBlock(Block.Properties.from(Blocks.SAND).doesNotBlockMovement()));
